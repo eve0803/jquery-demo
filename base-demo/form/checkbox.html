@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkbox</title>
+	<style>
+	/*input{
+		color: #f00;
+		background: #000;
+		width: 100px;
+		height: 100px;
+	}*/
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	p{
+		margin: 50px;
+	}
+	p span{
+		float: left;
+		height: 30px;
+		padding-left: 29px;
+		line-height: 30px;
+		background: url(images/checkOff.jpg) 0 0 no-repeat;
+		margin-right: 20px;
+	}
+	p span.selected{
+		background: url(images/checkOn.jpg) 0 0 no-repeat;
+	}
+	</style>
+
+</head>
+<body>
+	<form action="result.php" method="post">
+		<p>
+			<span class="selected">吃饭</span>
+			<span>睡觉</span>
+			<span>吐槽</span>
+		</p>
+		<input type="submit" value="提交">
+	</form>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var span = $('p span');
+            span.click(function(){
+                $(this).toggleClass('selected');
+                var index = $(this).index();
+                $('.checkbox input').eq(index).click();
+            });
+        });
+    </script>
+</body>
+</html>

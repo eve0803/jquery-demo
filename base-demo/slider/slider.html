@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片轮播</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        body{
+            margin: 50px;
+        }
+
+        .wrap{
+            width: 500px;
+            height: 350px;
+            border: 3px solid #f00;
+            position:relative;
+            overflow: hidden;
+        }
+
+        .wrap ul{
+            width: 2500px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .wrap ul li{
+            float: left;
+            width: 500px;
+        }
+
+        .wrap ol{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .wrap ol li{
+            float: left;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            border: 1px solid #fc0;
+            background: #000;
+            color: #fff;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+
+        .wrap ol li.current{
+            background: #fff;
+            color: #000;
+        }
+
+        .wrap .introduce{
+            height: 30px;
+            line-height: 30px;
+            width: 350px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            /*opacity: 0.5;
+            filter:alpha(opacity=50); */
+        }
+    </style>
+</head>
+<body>
+	
+	<div class="wrap">
+		<ul>
+			<li><img src="images/1.jpg" alt="傅家俊"></li>
+			<li><img src="images/2.jpg" alt="Stephen Maguire"></li>
+			<li><img src="images/3.jpg" alt="Mark Selby"></li>
+			<li><img src="images/4.jpg" alt="丁俊晖"></li>
+			<li><img src="images/5.jpg" alt="猜猜这个高富帅是who?"></li>
+		</ul>
+		<ol>
+			<li class="current">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ol>
+		<p class="introduce">111111</p>
+
+	</div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+     <script src="slider.js"></script>
+</body>
+</html>

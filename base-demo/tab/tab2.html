@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab2</title>
+	<link rel="stylesheet" href="tab2.css">
+      <style>
+          *{
+              padding: 0;
+              margin: 0;
+          }
+          li{
+              list-style-type: none;
+          }
+          body{
+              margin: 50px;
+          }
+
+          .hide{
+              display: none;
+          }
+
+          .tabTitle ul{
+              overflow: hidden;
+              _height:1px;
+          }
+          .tabTitle ul li{
+              float: left;
+              border: 1px solid #abcdef;
+              border-bottom: none;
+              height: 30px;
+              line-height: 30px;
+              padding: 0 15px;
+              margin-right: 3px;
+              cursor:pointer;
+          }
+
+          .current0{
+              background: #abcdef;
+              color:#fff;
+          }
+
+          .current1{
+              background: red;
+              color:teal;
+          }
+
+          .current2{
+              background: green;
+              color:yellow;
+          }
+
+          .tabContent div{
+              border: 1px solid #f60;
+              width: 300px;
+              height: 250px;
+              padding: 15px;
+          }
+      </style>
+	<script src="tab2.js"></script>
+</head>
+<body>
+
+	<!-- 这里是标签标题 -->
+	<div class="tabTitle">
+		<ul>
+			<li class="current0">xhtml</li>
+			<li>css</li>
+			<li>jquery</li>
+		</ul>
+	</div>
+
+
+	<div class="tabContent">
+		<div>xhtml的内容</div>
+		<div class="hide">css的内容</div>
+		<div class="hide">jquery的内容</div>
+	</div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+     <script>
+         $(function(){
+             var ali = $('.tabTitle ul li');
+             var aDiv = $('.tabContent div');
+             var timer = null;
+
+             ali.mouseover(function(){
+                 var _this = $(this);
+                 //setTimeout();的作用是延迟某一段代码的执行
+                 timer = setTimeout(function(){
+                     //$(this)方法属于哪个元素，$(this)就是指哪个元素
+                     _this.addClass(function(){
+                         return 'current'+_this.index();
+                     }).siblings().removeClass();
+                     //如果想用一组元素控制另一组元素的显示或者隐藏，需要用到索引
+                     var index = _this.index();
+                      aDiv.eq(index).show().siblings().hide();
+
+                 },100);
+             }).mouseout(function(){
+                 //clearTimeout的作用是清除定时器
+                 clearTimeout(timer);
+             });
+         });
+     </script>
+</body>
+</html>

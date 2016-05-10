@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+	div{width: 200px;height: 200px;background: #fc0;left: 0;top: 0;position: absolute;}
+    </style>
+
+</head>
+<body>
+	<div>111</div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //alert($)
+            $('div').animate({'left':'500px'},2000,function(){
+                $('div').css('border','1px solid red')
+            })
+        });
+    </script>
+</body>
+</html>
