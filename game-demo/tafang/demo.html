@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>无标题文档</title>
+<title>塔防类游戏</title>
 <style>
 *{ margin:0; padding:0;}
 #div1{ margin:20px auto; position:relative;}
-.box1{ width:50px; height:50px; background:black; float:left;}
+.box1{ width:50px; height:50px; background:palegreen; float:left;}
 .box2{ width:50px; height:50px; background:white; float:left;}
 .box3{ width:50px; height:50px; background:yellow; float:left; text-align:center; line-height:50px;}
 .box4{ width:50px; height:50px; background:blue; float:left; text-align:center; line-height:50px;}
@@ -14,6 +14,8 @@
 .active{ background:red;}
 .pt1{ width:50px; height:50px; background:url(pt1.jpg) no-repeat; float:left;}
 .bullet1{ width:5px; height:5px; background:blue; position:absolute;}
+.btnDiv{ text-align: center; margin: 30px auto;}
+.btnDiv input{background: plum;color: #fff; font-size: 14px;padding: 10px 25px; border: 0; margin: 10px;}
 </style>
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
@@ -285,7 +287,8 @@ $(function(){
 </head>
 
 <body>
-<input type="button" id="start1" value="开始" /><input type="button" value="200￥" id="money1" />
+<div class="btnDiv">
+<input type="button" id="start1" value="开始" /><input type="button" value="200元" id="money1" /></div>
 <div id="div1"></div>
 </body>
 </html>
