@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:20px; height:20px; background:red; position:absolute; left:50px; top:500px;}
+#div2{ width:20px; height:20px; background:blue; position:absolute; left:500px; top:400px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+	setInterval(function(){
+		
+		var b = $('#div2').offset().top - $('#div1').offset().top;
+		var a = $('#div2').offset().left - $('#div1').offset().left;
+		
+		var c = Math.sqrt(a*a + b*b);
+		
+		var xS = 10 * a/c;
+		var yS = 10 * b/c;
+		
+		$('#div1').css({ left : $('#div1').offset().left + xS , top : $('#div1').offset().top + yS });
+		
+	},30);
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>

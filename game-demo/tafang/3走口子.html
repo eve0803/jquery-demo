@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+#div1{ width:500px; height:500px; border:1px #000 solid; position:relative; margin:20px auto;}
+#div2{ width:100px; height:100px; background:red; position:absolute;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+$(function(){
+	
+	var $div1 = $('#div1');
+	var $div2 = $('#div2');
+	var dir = ['left','top','left','top'];
+	var speed = [10,10,-10,-10];
+	var target = [400,400,0,0];
+	
+	var iNow = 0;
+	var nowVal = 0;
+	
+	setInterval(function(){
+		
+		nowVal = $div2.position()[dir[iNow]] + speed[iNow];
+		
+		$div2.css( dir[iNow] , nowVal );
+		
+		if( Math.abs(nowVal - target[iNow]) <= 1 ){
+			if(iNow == 3){
+				iNow = 0;
+			}
+			else{
+				iNow++;
+			}
+		}
+		
+	},30);
+	
+});
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<div id="div2"></div>
+</div>
+</body>
+</html>
