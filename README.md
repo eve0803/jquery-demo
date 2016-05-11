@@ -11,4 +11,10 @@
 <a href="http://eve0803.github.io/jquery-demo/base-demo/zoom/zoom.html">放大镜       </a><br>
 <a href="http://eve0803.github.io/jquery-demo/base-demo/waterfall/wf.html">瀑布流   </a><br>
 <a href="http://eve0803.github.io/jquery-demo/base-demo/progress/progress.html">进度条   </a><br>
+##小游戏demo<br>
+<a href="http://eve0803.github.io/jquery-demo/game-demo/tuixiangzi/demo.html">推箱子 </a><br>
+<a href="http://eve0803.github.io/jquery-demo/game-demo/tafang/demo.html">塔防游戏 </a><br>
+##jquery插件demo<br>
+<a href="http://eve0803.github.io/jquery-demo/pligins-demo/">插件开发</a><br>
+
 
